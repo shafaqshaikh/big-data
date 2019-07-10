@@ -1,0 +1,29 @@
+/media/aiktc/windows10/hadoop-3.1.2.tar.gz
+#hadoop paths
+export HADOOP_HOME=$AIKTC/hadoop-3.1.2
+export HADOOP_CONF_DIR=$AIKTC/hadoop-3.1.2/etc/hadoop
+export HADOOP_MAPRED_HOME=$AIKTC/hadoop-3.1.2
+export HADOOP_COMMON_HOME=$AIKTC/hadoop-3.1.2
+export HADOOP_HDFS=$AIKTC/hadoop-3.1.2
+export HADOOP_YARN_HOME=$AIKTC/hadoop-3.1.2
+export HADOOP_PATH=$PATH:$AIKTC/hadoop-3.1.2
+
+setting java ome variable
+ gedit hadoop-3.1.2/etc/hadoop/hadoop-env.sh
+
+configuration og haddop
+ <configuration>
+ <property>
+<name>fs.default.name</name>
+<value>hdfs://localhost:9000</value>
+</property>
+</configuration>
+
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+</property>
+<property>
+<name>dfs.permission</name>
+<value>false</value>
+</property>
